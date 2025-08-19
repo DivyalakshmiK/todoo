@@ -1,13 +1,41 @@
 import { motion } from "framer-motion";
+import { Sparkles, CheckSquare } from "lucide-react";
 
 export default function Header() {
   return (
-    <motion.h1
-      initial={{ opacity: 0, y: -20 }}
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-4xl font-extrabold text-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent"
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="text-center space-y-4"
     >
-      ✨ My Todo List
-    </motion.h1>
+      {/* Main Title */}
+      <motion.div
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative"
+      >
+        <motion.h1
+          className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 leading-tight"
+        >
+          Todo App
+        </motion.h1>
+        
+
+      </motion.div>
+
+      {/* Subtitle */}
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="text-lg text-gray-600 dark:text-gray-400 font-medium max-w-md mx-auto"
+      >
+        Organize your life, one task at a time
+      </motion.p>
+
+
+    </motion.div>
   );
 }

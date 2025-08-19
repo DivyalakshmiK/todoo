@@ -50,7 +50,7 @@ export default function TaskInput({ onAdd }) {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6"
+      className="soft-card p-6"
     >
       <div className="space-y-4">
         <div className="flex items-center gap-4">
@@ -61,8 +61,8 @@ export default function TaskInput({ onAdd }) {
               value={title}
               onChange={handleInputChange}
               onKeyPress={handleKeyPress}
-              placeholder="What would you like to accomplish today?"
-              className="w-full px-4 py-3 text-lg border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+              placeholder="What peaceful intention would you like to set today?"
+              className="peaceful-input w-full"
               disabled={isSubmitting}
             />
             
@@ -70,26 +70,25 @@ export default function TaskInput({ onAdd }) {
           </div>
 
           {/* Add Button */}
-          <button
+          <motion.button
             onClick={handleAdd}
             disabled={!title.trim() || isSubmitting}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             className={`
-              px-6 py-3 rounded-lg font-semibold text-white transition-all duration-200
-              ${title.trim() && !isSubmitting 
-                ? 'bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow-md' 
-                : 'bg-gray-400 cursor-not-allowed'
-              }
+              gentle-button flex items-center gap-2
+              ${!title.trim() || isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}
             `}
           >
             {isSubmitting ? (
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <div className="w-5 h-5 border-2 border-emerald-700 border-t-transparent rounded-full animate-spin"></div>
             ) : (
               <>
                 <Plus size={20} className="inline mr-2" />
                 Add Task
               </>
             )}
-          </button>
+          </motion.button>
         </div>
 
         {/* Error message */}

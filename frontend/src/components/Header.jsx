@@ -17,9 +17,13 @@ export default function Header() {
         className="relative"
       >
         <motion.h1
-          className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 leading-tight"
+          className="text-5xl md:text-6xl font-light text-slate-700 leading-relaxed text-center"
+          style={{ fontFamily: 'Comfortaa, sans-serif' }}
         >
-          Todo App
+          <span className="text-emerald-500">✨</span> Peaceful
+          <span className="block text-3xl md:text-4xl mt-3 text-slate-600 font-normal">
+            Task Garden
+          </span>
         </motion.h1>
         
 
@@ -29,10 +33,11 @@ export default function Header() {
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-        className="text-lg text-gray-600 dark:text-gray-400 font-medium max-w-md mx-auto"
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="text-lg text-slate-500 font-normal max-w-md mx-auto text-center leading-relaxed"
+        style={{ fontFamily: 'Nunito, sans-serif' }}
       >
-        Organize your life, one task at a time
+        Nurture your goals with <span className="text-emerald-600 font-medium">mindful intention</span> 🌱
       </motion.p>
 
 

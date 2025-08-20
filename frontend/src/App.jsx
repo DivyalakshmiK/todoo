@@ -68,25 +68,13 @@ export default function App() {
       
       {/* Dynamic Background */}
       <div className="fixed inset-0">
-        {/* Background image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
-          style={{
-            backgroundImage: 'var(--background-image)',
-            filter: 'brightness(0.3) saturate(0.8)'
-          }}
-        ></div>
-        
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
         
         {/* Theme-based gradient overlay */}
         <div className="absolute inset-0">
-          {/* Light mode - Sunrise overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-100/30 via-orange-100/20 to-yellow-100/30 dark:hidden"></div>
-          
-          {/* Dark mode - Night overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-indigo-900/30 to-purple-900/20 hidden dark:block"></div>
+          {/* Dark mode overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-indigo-900/30 to-purple-900/20"></div>
         </div>
         
         {/* Subtle texture overlay */}

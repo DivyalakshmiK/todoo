@@ -17,13 +17,10 @@ export default function Header() {
         className="relative"
       >
         <motion.h1
-          className="text-5xl md:text-6xl font-light text-slate-700 leading-relaxed text-center"
+          className="text-4xl md:text-5xl font-light text-slate-700 dark:text-slate-200 leading-relaxed text-center"
           style={{ fontFamily: 'Comfortaa, sans-serif' }}
         >
-          <span className="text-emerald-500">✨</span> Peaceful
-          <span className="block text-3xl md:text-4xl mt-3 text-slate-600 font-normal">
-            Task Garden
-          </span>
+          Todoo
         </motion.h1>
         
 
@@ -34,10 +31,10 @@ export default function Header() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-lg text-slate-500 font-normal max-w-md mx-auto text-center leading-relaxed"
+        className="text-lg text-slate-500 dark:text-slate-400 font-normal max-w-md mx-auto text-center leading-relaxed"
         style={{ fontFamily: 'Nunito, sans-serif' }}
       >
-        Nurture your goals with <span className="text-emerald-600 font-medium">mindful intention</span> 🌱
+        Nurture your goals with <span className="text-emerald-600 dark:text-emerald-400 font-medium">mindful intention</span> 🌱
       </motion.p>
 
 

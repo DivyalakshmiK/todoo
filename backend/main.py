@@ -31,11 +31,7 @@ class Title(BaseModel):
 
 # -------------------------------------------------------------------------------------
 
-storage = [
-    {"tid": 1, "title": "task1", "completed": True},
-    {"tid": 2, "title": "task2", "completed": False},
-    {"tid": 3, "title": "task3", "completed": False}
-]
+storage = []
 
 counter = len(storage)
 

@@ -32,11 +32,11 @@ export default function Toast({ message, type = "info", isVisible, onClose, dura
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="fixed top-24 right-6 z-50 max-w-sm"
         >
-          <div className={`glass-card p-4 ${toastConfig.bg}`}>
+          <div className={`soft-card p-4 ${toastConfig.bg}`}>
             <div className="flex items-start gap-3">
               <Icon size={20} className={`${toastConfig.color} mt-0.5 flex-shrink-0`} />
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-white">
+                <p className="text-sm font-medium text-gray-900 dark:text-gray-100">
                   {message}
                 </p>
               </div>

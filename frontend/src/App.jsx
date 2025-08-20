@@ -100,7 +100,7 @@ export default function App() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="w-80 flex-shrink-0"
           >
-            <div className="sticky top-50 space-y-6">
+            <div className="sticky top-52 space-y-6">
               {/* Stats Card */}
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}

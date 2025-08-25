@@ -8,8 +8,6 @@ import ThemeToggle from "./components/ThemeToggle";
 import Toast from "./components/Toast";
 import { motion } from "framer-motion";
 
-// App.jsx definition
-
 export default function App() {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
